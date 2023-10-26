@@ -24,6 +24,7 @@ let notes = [
 		important: true
 	}
 ]
+console.log('Hola mundo actualizado')
 
 //forma antigua con http de node
 // const app = http.createServer((req, res) => {
