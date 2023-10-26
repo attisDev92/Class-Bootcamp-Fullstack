@@ -24,7 +24,7 @@ let notes = [
 		important: true
 	}
 ]
-console.log('Hola mundo actualizado')
+
 
 //forma antigua con http de node
 // const app = http.createServer((req, res) => {
@@ -47,6 +47,10 @@ const unknownEndpoint = (req, res) => {
 app.use(cors());
 app.use(express.json());
 app.use(reqLogger);
+
+app.get('/', (req, res) => {
+	res.send('Hola mundo desde esta Api')
+})
 
 app.get('/api/notes', (req, res) => {
 	res.json(notes)
